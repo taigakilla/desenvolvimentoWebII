@@ -37,13 +37,13 @@ public class Pessoa{
     public Long getCpf() {
         return cpf;
     }
+    
+    public void setCpf(Long cpf) {
+        this.cpf = cpf;
+    }
 
     @Override
     public String toString(){
-        return "Pessoa{Nome=" + getName() + ", Idade=" + getAge() + ", CPF=" + getCpf() + "}";
-    }
-
-    public void setCpf(Long cpf) {
-        this.cpf = cpf;
+        return "Nome=" + getName() + ", Idade=" + getAge() + ", CPF=" + getCpf();
     }
 }
