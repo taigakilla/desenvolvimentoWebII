@@ -6,19 +6,25 @@ public class Disciplina{
     private String name;
     private List<Aluno> alunos;
     private List<Professor> professores;
+    private int cargaHoraria;
 
     public Disciplina(){
-        this("", new ArrayList<Aluno>(), new ArrayList<Professor>());
+        this("", new ArrayList<Aluno>(), new ArrayList<Professor>(), 0);
     }
 
     public Disciplina(String name){
-        this(name, new ArrayList<Aluno>(), new ArrayList<Professor>());
+        this(name, new ArrayList<Aluno>(), new ArrayList<Professor>(), 0);
     }
 
-    public Disciplina(String name, List<Aluno> alunos, List<Professor> professores){
+    public Disciplina(String name, int cargaHoraria){
+        this(name, new ArrayList<Aluno>(), new ArrayList<Professor>(), cargaHoraria);
+    }
+
+    public Disciplina(String name, List<Aluno> alunos, List<Professor> professores, int cargaHoraria){
         this.name = name;
         this.alunos = alunos;
         this.professores = professores;
+        this.cargaHoraria = cargaHoraria;
     }
 
     public String getName() {
@@ -35,6 +41,14 @@ public class Disciplina{
 
     public void setAlunos(List<Aluno> alunos) {
         this.alunos = alunos;
+    }
+
+    public int getCargaHoraria() {
+        return cargaHoraria;
+    }
+
+    public void setCargaHoraria(int cargaHoraria) {
+        this.cargaHoraria = cargaHoraria;
     }
 
     public void addAluno(Aluno aluno) {
