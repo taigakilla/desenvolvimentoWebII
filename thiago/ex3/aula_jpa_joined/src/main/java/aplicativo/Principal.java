@@ -18,8 +18,8 @@ public class Principal {
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("aula-jpa"); //Instancia o EntityManagerFactory com as configurações de persistencia
 		EntityManager em = emf.createEntityManager(); //Intancia o EntityManager
 		
-		Vendedor vendedor = new Vendedor("Thiago", 23, 1287);
-		Cliente cliente = new Cliente("Rafael", 22, 2134);
+		Vendedor vendedor = new Vendedor("Mauricio", 33, 1);
+		Cliente cliente = new Cliente("Rafael", 34, 1);
 		
 		em.getTransaction().begin();// iniciar transação com banco de dados
 		
